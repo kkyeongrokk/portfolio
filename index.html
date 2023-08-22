@@ -16,13 +16,15 @@
             <div class="container">
                 <nav>
                     <img src="" alt="" />
-                    <ul>
+                    <ul id="sidemenu">
                         <li><a href="#">Home</a></li>
                         <li><a href="#">About Me</a></li>
                         <li><a href="#">Services</a></li>
-                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Projects</a></li>
                         <li><a href="#">Contact</a></li>
+                        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                     </ul>
+                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
                 </nav>
                 <div class="header-text">
                     <p>Web Developer / Software Engineer</p>
@@ -41,11 +43,25 @@
                     <div class="about-col-2">
                         <h1 class="sub-title">About Me</h1>
                         <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing
-                            elit. Aspernatur, perferendis. Laboriosam expedita,
-                            maiores odio, vitae aliquid veniam fuga laudantium
-                            iste cum alias nobis! Alias consequatur nisi
-                            voluptatum facere quo mollitia!
+                            Software Engineer | Effective Communicator |
+                            Passionate Sports Enthusiast<br />🌍 Relocated from
+                            Korea to embark on an exciting career as a software
+                            engineer after an honorable discharge from the
+                            military.<br />🤝 Thrived in numerous team
+                            collaboration situations, honing exceptional
+                            communication skills to foster productive and
+                            harmonious working environments.<br />⚽🎾 Embrace
+                            an active lifestyle outside of work, finding joy in
+                            playing sports like tennis and soccer during my
+                            leisure time. Led and captained a tennis team at my
+                            local club, showcasing leadership and team-building
+                            capabilities.<br />🤝🌟 As a natural people person,
+                            I take pleasure in proactively reaching out to
+                            others, forging genuine connections, and nurturing
+                            meaningful relationships. <br />🖥️🌐 Passionate
+                            about web development, my primary focus in computer
+                            science lies in creating innovative and user-centric
+                            web solutions.
                         </p>
                         <div class="tab-titles">
                             <p
@@ -251,6 +267,60 @@
             </div>
         </div>
 
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Me</h1>
+                        <p>
+                            <i class="fa-solid fa-paper-plane"></i
+                            >kyeong@evergreen.edu
+                        </p>
+                        <p><i class="fa-solid fa-phone"></i>+1 (206)886-6211</p>
+                        <div class="social-icons">
+                            <a href="https://github.com/kkyeongrokk"
+                                ><i class="fa-brands fa-github"></i
+                            ></a>
+                            <a
+                                href="https://www.linkedin.com/in/kyeongrok-kim-dev/"
+                                ><i class="fa-brands fa-linkedin"></i
+                            ></a>
+                        </div>
+                        <a
+                            href="files/Latest-Kyeongrok-Resume.pdf"
+                            class="btn btn2"
+                            >Download Resume</a
+                        >
+                    </div>
+
+                    <div class="contact-right">
+                        <form>
+                            <input
+                                type="text"
+                                name="Name"
+                                placeholder="Your Name"
+                                required
+                            />
+                            <input
+                                type="email"
+                                name="email"
+                                placeholder="Your Email"
+                                required
+                            />
+                            <textarea
+                                name="Message"
+                                rows="6"
+                                placeholder="Your Message"
+                            ></textarea>
+                            <button type="submit" class="btn btn2">
+                                Submit
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <script>
             var tablinks = document.getElementsByClassName("tab-links");
             var tabcontents = document.getElementsByClassName("tab-contents");
@@ -265,6 +335,17 @@
 
                 event.currentTarget.classList.add("active-link");
                 document.getElementById(tabName).classList.add("active-tab");
+            }
+        </script>
+
+        <script>
+            var sidemenu = document.getElementById("sidemenu");
+
+            function openmenu() {
+                sidemenu.style.right = "0";
+            }
+            function closemenu() {
+                sidemenu.style.right = "-200px";
             }
         </script>
     </body>
